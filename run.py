@@ -4,6 +4,9 @@ from handlers import router
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+
 async def main():
     bot = Bot(token=BOT_TOKEN)
     dp = Dispatcher()
